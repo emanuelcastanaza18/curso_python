@@ -20,6 +20,8 @@
 #     ["Pulga", 5]
 # ]
 
+
+#map
 # # nombres = [expresion for item in items]
 # nombres = [usuario[0] for usuario in usuarios]
 # print(nombres)
@@ -31,17 +33,29 @@
 #     ["Pulga", 5]
 # ]
 
+#Filter
 # # nombres = [expresion for item in items if lista [id] ]
 # nombres = [usuario for usuario in usuarios if usuario[1] > 2]
 # print(nombres)
 
-#Modificar y filtarla
+#Map
+# usuarios = [
+    # ["chanchito", 4],
+    # ["Felipe", 1],
+    # ["Pulga", 5]
+# ]
+# 
+# #nombres = list(map(lambda usuario item: Valor que deseamos retornar[Elemento], Que queremos iterar))
+# nombres = list(map(lambda usuario: usuario[0], usuarios))
+# print(nombres)
+
+#Filter
 usuarios = [
     ["chanchito", 4],
     ["Felipe", 1],
     ["Pulga", 5]
 ]
 
-# nombres = [expresion[indice] for item in items if lista [id] ]
-nombres = [usuario[0] for usuario in usuarios if usuario[1] > 2]
-print(nombres)
+# menosusuarios = list(map(lambda usuario item: Valor que deseamos retornar[Elemento], Que queremos iterar))
+menosusuarios = list(filter(lambda usuario: usuario[1] > 2, usuarios))
+print(menosusuarios)
